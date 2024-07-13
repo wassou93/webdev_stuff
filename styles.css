@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    /* This will make sizes include border size */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: red;
+    font-weight: 1000;
+    border: 1px solid pink;
+    border-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid sienna;
+    align-items: center;
+}
+
+.blog-post-ul-element {
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+    border-bottom: 1px solid sienna;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.blog-post-ul-element:nth-child(-n + 2) {
+    border-bottom: none;
+    color: limegreen;
+}
+
+.blog-posts::after {
+    content: " ❦ ";
+    text-align: center;
+    font-size: 50px;
+    display: block;
+    color: red;
+}
+
+.ex-box {
+    border: 2px solid #aaa;
+    background-color: #eee;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.box-1 {
+    border: 1px solid black;
+    color: white;
+    background-color: blue;
+    height: 150px;
+    width: 300px;
+}
+
+.box-2 {
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    height: 100px;
+    width: 300px;
+}
+
+.box-3 {
+    border: 1px solid black;
+    color: white;
+    background-color: green;
+    height: 200px;
+    width: 100px;
+}
+
+/* .floated div {
+     float: left;
+     margin: 10px;
+} */
+
+.flex-container {
+    /**
+     * The `display` property in CSS specifies the type of box used for an element.
+     * When set to `flex`, it enables a flex container, allowing the use of flexbox layout.
+     * Flexbox provides a flexible way to distribute space among items in a container.
+     * 
+     * The `display: flex` option has the following effects:
+     * - The container becomes a flex container, and its direct children become flex items.
+     * - The flex items are laid out in a single row by default, unless modified by other flex properties.
+     * - The flex items can be aligned and spaced using various flexbox properties.
+     * 
+     * Other possible values for the `display` property include:
+     * - `block`: The element generates a block-level box.
+     * - `inline`: The element generates an inline-level box.
+     * - `inline-block`: The element generates an inline-level box that can have block-level properties.
+     * - `grid`: The element generates a grid container, allowing the use of grid layout.
+     * - `none`: The element is not displayed.
+     * 
+     * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/display|MDN Docs: display}
+     * @see {@link https://www.w3schools.com/cssref/pr_class_display.asp|W3Schools: display}
+     */
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* default is no wrap, it will squash content instead */
+    /* justify-content: center; */
+    /* align items horizontally (main axis), center */
+    /* flex-direction: column; */
+    /* default is row, can be column */
+    /* align-items: center; */
+    height: 1000px;
+}
+
+.box-1 {
+    flex-grow: 1;
+    width: 0;
+}
+
+.box-2 {
+    flex-grow: 4;
+    width: 0;
+}
+
+.box-3 {
+    flex-grow: 1;
+    width: 0;
+}
+

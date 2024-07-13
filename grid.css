@@ -1,0 +1,82 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #c62da8;
+}
+
+h1 {
+    color: #fff;
+    font-size: 36px;
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.my-page-header {
+    grid-area: nav-header;
+    background-color: red;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my-page-body {
+    grid-area: main-body;
+    background-color: blue;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my-page-sidebar {
+    grid-area: nav-side;
+    background-color: green;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my-page-footer {
+    grid-area: footer;
+    background-color: rgb(103, 103, 13);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my-page {
+    display: grid;
+    grid-template-areas:
+      "nav-header  nav-header  nav-header  nav-side"
+      "main-body   main-body   .           nav-side"
+      "footer      footer      footer      footer";
+      grid-template-columns: 2fr 1fr 1fr 1fr; /* The first column is twice as wide as the others */
+      grid-template-rows: 1fr 5fr 1fr; /* The middle row is twice as tall as the others */
+   
+  }
+@keyframes lol {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+  .spinny-boi {
+    animation: lol 1s infinite linear;
+    display: inline-block;
+    font-size: 30px;
+  }
